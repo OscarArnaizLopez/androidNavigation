@@ -1,0 +1,16 @@
+<ActionBar [title]="title" (loaded)="actionBarLoaded($event)">
+    <ActionItem android.systemIcon="ic_menu_add"  android.position="actionBar" (tap)="onTap()"></ActionItem>
+</ActionBar>
+<TabView  (loaded)="tabviewloaded($event)" height="100%" width="100%">
+    <StackLayout *tabItem="{title: 'tab 1'}">
+        <!--<Button text="Open new Window" (tap)="onTap()"></Button>-->
+        <Image src="res://grumpycat" width="325" height="188"> </Image>
+        <Label [text]="message" class="message" textWrap="true"></Label>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'tab 2'}">
+        <Label text="Tab2" class="message" textWrap="true"></Label>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'tab 3'}">
+        <Label text="Tab 3" class="message" textWrap="true"></Label>
+    </StackLayout>
+</TabView>
